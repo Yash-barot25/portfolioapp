@@ -1,4 +1,5 @@
 .App{
+  background: transparent;
   margin-right: auto;
   margin-left: auto;
   padding-left: 20px;
@@ -10,11 +11,18 @@
   align-content:flex-start;
 }
 .imageContainer{
+  flex-shrink:0;
   align-content: flex-start;
-  font-size: 30px;
+
   white-space:pre-line;
 }
+.name{
+  margin-top:40px;
+  font-size: 24px;
+  font-weight: bold;
+}
 .profilepic{
+  flex-shrink:0;
   margin-top: 30px;
   width:150px;
   height:150px;
@@ -22,10 +30,121 @@
   overflow:hidden;
 
 }
+.pyramidPic{
+  flex-shrink:0;
+  margin-top: 30px;
+  margin-left:575px;
+  width:150px;
+  height:150px;
+  border-radius: 75px;
+  overflow:hidden;
+}
 .container{
   width: 1180px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+.topRow{
+  min-width: 0;
+  width: 500px;
+  height: 180px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 30px;
+}
+.jobTitle{
+  min-width: 0;
+  font-size: 20px;
+  color: orange;
+}
+.nameAndTitle{
+align-content: flex-start;
+}
+.equivPanel{
+  margin-top:15px;
+  min-height: 300px;
+  border: 1px solid #41a3f3;
+}
+.equivHeader{
+  display:flex; 
+  text-align:start;
+  vertical-align: middle;
+  font-size:24px;
+  color:#ffffff;
+  background-color: #41a3f3;
+  border-color: #41a3f3;
+  padding-left: 15px;
+}
+.keyboardPic{
+  background: transparent;
+  padding-right:15px;
+  width: 35px;
+  height: 35px;
+}
+.equivBody{
+  display:flex;
+  box-sizing: border-box;
+  padding-top:16px;
+  padding-right:16px;
+  padding-bottom:16px;
+  padding-left:16px;
+}
+.circleContainer{
+  display:grid;
+  width:fit-content;
+  padding:20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.circle{
+  display:grid;
+}
+.circleImage{
+  grid-column:1;
+  grid-row:1;
+}
+.numberEquiv{
+  grid-column:1;
+  grid-row:1;
+  text-align: center;
+  padding-top:40px;
+
+}
+.typeOfEquiv{
+  font-size: 18px;
+  text-align: center;
+}
+.equivDescription{
+  padding-top: 200px;
+  font-size:12px;
+  color:rgb(116, 116, 116);
+  position:absolute;
+}
+.aboutMeParagraph{
+  font-size: 16px!important;
+    line-height: 21px;
+    word-wrap: break-word;
+    text-align: justify;
+    margin: 0 0 22px;
+    padding-bottom: px;
+}
+.equivPanel2{
+  margin-top:15px;
+  min-height: 300px;
+  border: 1px solid #41a3f3;
+}
+.equivHeader2{
+  display:flex; 
+  text-align:start;
+  vertical-align: middle;
+  font-size:24px;
+  color:#ffffff;
+  background-color: #9b7bb5;
+  border-color: #9b7bb5;
+  padding-left: 15px;
 }
