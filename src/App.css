@@ -1,5 +1,6 @@
 .App{
   background: transparent;
+  display:flex;
   margin-right: auto;
   margin-left: auto;
   padding-left: 20px;
@@ -33,7 +34,6 @@
 .pyramidPic{
   flex-shrink:0;
   margin-top: 30px;
-  margin-left:575px;
   width:150px;
   height:150px;
   border-radius: 75px;
@@ -48,13 +48,13 @@
 }
 .topRow{
   min-width: 0;
-  width: 500px;
   height: 180px;
   display:flex;
   flex-wrap:wrap;
   align-items: flex-start;
   flex-direction: column;
   font-size: 30px;
+  
 }
 .jobTitle{
   min-width: 0;
@@ -63,6 +63,8 @@
 }
 .nameAndTitle{
 align-content: flex-start;
+padding-left: 20px;
+padding-right: 500px;
 }
 .equivPanel{
   margin-top:15px;
@@ -135,8 +137,8 @@ align-content: flex-start;
 }
 .equivPanel2{
   margin-top:15px;
-  min-height: 300px;
-  border: 1px solid #41a3f3;
+  border: 1px solid #9b7bb5;
+
 }
 .equivHeader2{
   display:flex; 
@@ -147,4 +149,91 @@ align-content: flex-start;
   background-color: #9b7bb5;
   border-color: #9b7bb5;
   padding-left: 15px;
+}
+.Wsu{
+  background: transparent;
+  width:140px;
+  height:90px;
+}
+.WichitaState{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  height:100px;
+}
+.WichitaStateImage{
+  height: fit-content;
+  width: fit-content;
+}
+.equivBody2{
+  padding:16px;
+}
+.bach{
+  padding-left: 75px;
+  margin: 0px;
+  font-size: 24px;
+  height:fit-content;
+}
+.bachinfo{
+  padding-left: 75px;
+  font-size:16px;
+  color:#92a7b3;
+  height:fit-content;
+  margin: 0px;
+}
+.equivPanel3{
+  margin-top:15px;
+  border: 1px solid #D87CA6;
+
+}
+.equivHeader3{
+  display:flex; 
+  text-align:start;
+  vertical-align: middle;
+  font-size:24px;
+  color:#ffffff;
+  background-color: #D87CA6;
+  border-color: #D87CA6;
+  padding-left: 15px;
+}
+.equivBody3{
+  padding:16px;
+}
+.equivPanel4{
+  margin-top:15px;
+  border: 1px solid #ade0e0;
+
+}
+.equivHeader4{
+  display:flex; 
+  text-align:start;
+  vertical-align: middle;
+  font-size:24px;
+  color:#ffffff;
+  background-color: #ade0e0;
+  border-color: #ade0e0;
+  padding-left: 15px;
+}
+.equivBody4{
+  padding:16px;
+}
+.equivPanel5{
+  margin-top:15px;
+  border: 1px solid #fac252;
+
+}
+.equivHeader5{
+  display:flex; 
+  text-align:start;
+  vertical-align: middle;
+  font-size:24px;
+  color:#ffffff;
+  background-color: #fac252;
+  border-color: #fac252;
+  padding-left: 15px;
+}
+.equivBody5{
+  padding:16px;
 }
