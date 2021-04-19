@@ -3,6 +3,8 @@ import PyramidAcademy from './images/pyramidAcademy.png'
 import PyramidPic from './images/pyramid.png';
 import pfp from './images/pfp.png'
 import PurpleCircle from './images/purpleCircle.png'
+import OrangeCircle from './images/orangeCircle.png'
+import Wsu from './images/WSU.png'
 import './App.css';
 
 function App() {
@@ -41,7 +43,7 @@ function App() {
           </div>
           <div className="circleContainer">
             <div className="circle">
-              <img src={PurpleCircle} alt="alt" className="circleImage"/>
+              <img src={OrangeCircle} alt="alt" className="circleImage"/>
               <div className="numberEquiv">20</div>
             </div>
             <p className="typeOfEquiv">Python</p>
@@ -55,7 +57,7 @@ function App() {
           </div>
           <div className="circleContainer">
             <div className="circle">
-              <img src={PurpleCircle} alt="alt" className="circleImage"/>
+              <img src={OrangeCircle} alt="alt" className="circleImage"/>
               <div className="numberEquiv">20</div>
             </div>
             <p className="typeOfEquiv">HTML</p>          
@@ -69,7 +71,7 @@ function App() {
           </div>
           <div className="circleContainer">
             <div className="circle">
-              <img src={PurpleCircle} alt="alt" className="circleImage"/>
+              <img src={OrangeCircle} alt="alt" className="circleImage"/>
               <div className="numberEquiv">20</div>
             </div>
             <p className="typeOfEquiv">JavaScript</p>          
@@ -84,16 +86,54 @@ function App() {
           About Me
         </h2>
         <p className="aboutMeParagraph">
-        I am a full-stack Java software developer with recent experience building web applications. I went to school at the University of South Alabama where I pursued a Bachelor’s degree in Broadcast Journalism and a Associate's degree in Commercial Art from Coastal Alabama Community College. I recently decided to change career paths to enter the technology field because I rediscovered my passion for coding while working in HTML and CSS during a class project diving into commerical art and I wanted to dive deeper in the field. In a few years, my goal is to become a senior developer so that I can mentor others.
-<br/><br/>
-During my time at Revature, I’ve worked on several projects where I gained experience in both frontend development (including HTML/CSS, JavaScript, and Angular) as well as backend technologies (including Java, SQL, Spring framework, and microservices architecture). I also have experience with DevOps and using Jenkins and deploying to the cloud with Amazon Web Services. I really enjoy the collaborative team environment where I can learn from others, and I have worked hard to improve my interpersonal and communication skills. I look forward to applying all of my skills and prior experience in a position on your team.
-</p>
+        I recently graduated from Wichita State University this past December with a bachelor in Computer Science and a minor in Math. After graduating, I joined in Pyramid Academy's training program to help prepare me for my career, and now I am looking for a company at which I can continue to learn and grow as a software engineer.<br/><br/>
+        My three most important strengths are my drive to learn and grow, my work ethic, and my time management. These strengths help me to become a better developer, offer efficient work for my employer, and set accurate goals and stick to strict schedules that I can make for myself. These strengths allow me to adapt to and effectively use technologies to complete work on time for my employer. My aspirations for the future are to continue to learn and grow as a software engineer while effectively putting the skills I have developed to use in order to do good work for my employer. So far, with these strengths, I have completed a bachelor’s degree, and more recently did a training program with Pyramid Academy, where I learned multiple technologies and efficiently developed projects</p>
       </div>
       <div className="equivPanel2">
         <div className="equivHeader2" >
         <img src={PyramidPic} alt="alt" className="keyboardPic"/>
           Education and Certification
       </div>
+      <div className="equivBody2">
+      <div className="WichitaState">
+        <div className="WichitaStateImage">
+          <img src={Wsu} alt = "alt" className="Wsu"/>
+        </div>
+        <p className="bach">
+        Bachelor's Degree - Computer Science Minor in Mathematics
+        </p>
+        <p className="bachinfo">
+        Wichita State University - December 2020
+        </p>
+      </div>
+    </div>
+    </div>
+    <div className="equivPanel3">
+        <div className="equivHeader3" >
+        <img src={PyramidPic} alt="alt" className="keyboardPic"/>
+          Skill Matrix
+      </div>
+      <div className="equivBody3">
+      
+    </div>
+    </div>
+    <div className="equivPanel4">
+        <div className="equivHeader4" >
+        <img src={PyramidPic} alt="alt" className="keyboardPic"/>
+          Projects
+      </div>
+      <div className="equivBody4">
+      
+    </div>
+    </div>
+    <div className="equivPanel5">
+        <div className="equivHeader5" >
+        <img src={PyramidPic} alt="alt" className="keyboardPic"/>
+          Other Experiences
+      </div>
+      <div className="equivBody5">
+      
+    </div>
     </div>
     </div>
     </div>
