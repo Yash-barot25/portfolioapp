@@ -1,13 +1,196 @@
-import React, {Component} from 'react'
-import PyramidAcademy from './images/pyramidAcademy.png'
+import React, {Component} from 'react';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+import PyramidAcademy from './images/pyramidAcademy.png';
 import PyramidPic from './images/pyramid.png';
-import pfp from './images/pfp.png'
-import PurpleCircle from './images/purpleCircle.png'
-import OrangeCircle from './images/orangeCircle.png'
-import Wsu from './images/WSU.png'
+import pfp from './images/pfp.png';
+import PurpleCircle from './images/purpleCircle.png';
+import OrangeCircle from './images/orangeCircle.png';
+import Wsu from './images/WSU.png';
 import './App.css';
 
-function App() {
+class App extends Component {
+  render(){
+    const frontEndOptions = {
+      chart: {
+        type: 'pie'
+      },
+      credits:{
+        enabled:false
+      },
+      legend:{
+        align:'bottom',
+        layout:'vertical',
+        x:100
+      },
+      title:{
+        text: 'Front-End Tech'
+      },
+      plotOptions:{
+        pie:{
+          shadow: false
+        }
+      },
+      tooltip:{
+        formatter:function(){
+          return '<b>'+this.point.name +'</b>: '+ this.y;
+        }
+      },
+      series: [
+        {
+          name:'Technologies',
+          data: [["HTML (2 Months)",2],["CSS (2 Months)",2],["JavaScript (4 Months)",4],["Bootstrap (2 Months)",2]],
+          size: '50%',
+          innerSize: '50%',
+          showInLegend:true,
+          dataLabels:{enabled:false}
+        }
+      ]
+    };
+    const backEndOptions = {
+      chart: {
+        type: 'pie'
+      },
+      credits:{
+        enabled:false
+      },
+      legend:{
+        align:'bottom',
+        layout:'vertical',
+        x:100
+      },
+      title:{
+        text: 'Back-End Tech'
+      },
+      plotOptions:{
+        pie:{
+          shadow: false
+        }
+      },
+      tooltip:{
+        formatter:function(){
+          return '<b>'+this.point.name +'</b>: '+ this.y;
+        }
+      },
+      series: [
+        {
+          name:'Technologies',
+          data: [["Java (4 Months)",4],["SpringBoot (3 Months)",3],["Python (12 Months)",12],["C++ (24 Months)",24]],
+          size: '50%',
+          innerSize: '50%',
+          showInLegend:true,
+          dataLabels:{enabled:false}
+        }
+      ]
+    };
+    const devOpsOptions = {
+      chart: {
+        type: 'pie'
+      },
+      credits:{
+        enabled:false
+      },
+      legend:{
+        align:'bottom',
+        layout:'vertical',
+        x:100
+      },
+      title:{
+        text: 'DevOps'
+      },
+      plotOptions:{
+        pie:{
+          shadow: false
+        }
+      },
+      tooltip:{
+        formatter:function(){
+          return '<b>'+this.point.name +'</b>: '+ this.y;
+        }
+      },
+      series: [
+        {
+          name:'Technologies',
+          data: [["GitKraken (4 Months)",4],["GitLab (2 Months)",2],["GitHub (20 Months)",20],["SVN (2 Months",2]],
+          size: '50%',
+          innerSize: '50%',
+          showInLegend:true,
+          dataLabels:{enabled:false}
+        }
+      ]
+    };
+    const databaseLayerOptions = {
+      chart: {
+        type: 'pie'
+      },
+      credits:{
+        enabled:false
+      },
+      legend:{
+        align:'bottom',
+        layout:'vertical',
+        x:100
+      },
+      title:{
+        text: 'DevOps'
+      },
+      plotOptions:{
+        pie:{
+          shadow: false
+        }
+      },
+      tooltip:{
+        formatter:function(){
+          return '<b>'+this.point.name +'</b>: '+ this.y;
+        }
+      },
+      series: [
+        {
+          name:'Technologies',
+          data: [["SQL (6 Months)",6],["MySQL (3 Months)",3],["Hibernate (3 Months)",3]],
+          size: '50%',
+          innerSize: '50%',
+          showInLegend:true,
+          dataLabels:{enabled:false}
+        }
+      ]
+    };
+    const devToolsOptions = {
+      chart: {
+        type: 'pie'
+      },
+      credits:{
+        enabled:false
+      },
+      legend:{
+        align:'bottom',
+        layout:'vertical',
+        x:100
+      },
+      title:{
+        text: 'DevOps'
+      },
+      plotOptions:{
+        pie:{
+          shadow: false
+        }
+      },
+      tooltip:{
+        formatter:function(){
+          return '<b>'+this.point.name +'</b>: '+ this.y;
+        }
+      },
+      series: [
+        {
+          name:'Technologies',
+          data: [["IntelliJ (4 Months)",4],["PyCharm (6 Months)",6],["Visual Studio Code (18 Months)",18],["Dev C++ (18 Months)",18]],
+          size: '50%',
+          innerSize: '50%',
+          showInLegend:true,
+          dataLabels:{enabled:false}
+        }
+      ]
+    };
   return (
     <div className="App">
       <div className="container">
@@ -108,12 +291,31 @@ function App() {
       </div>
     </div>
     </div>
-    <div className="equivPanel3">
+      <div className="equivPanel3">
         <div className="equivHeader3" >
         <img src={PyramidPic} alt="alt" className="keyboardPic"/>
           Skill Matrix
       </div>
       <div className="equivBody3">
+        <div style={{width: 400, height: 400}}>
+      <HighchartsReact highcharts={Highcharts} options={frontEndOptions}/>
+      </div>
+      
+      <div style={{width: 400, height: 400}}>
+      <HighchartsReact highcharts={Highcharts} options={backEndOptions}/>
+      </div>
+
+      <div style={{width: 400, height: 400}}>
+      <HighchartsReact highcharts={Highcharts} options={devOpsOptions}/>
+      </div>
+
+      <div style={{width: 400, height: 400}}>
+      <HighchartsReact highcharts={Highcharts} options={databaseLayerOptions}/>
+      </div>
+
+      <div style={{width: 400, height: 400}}>
+      <HighchartsReact highcharts={Highcharts} options={devToolsOptions}/>
+      </div>
       
     </div>
     </div>
@@ -138,6 +340,7 @@ function App() {
     </div>
     </div>
   );
+}
 }
 
 export default App;

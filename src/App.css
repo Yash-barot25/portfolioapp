@@ -200,7 +200,12 @@ padding-right: 500px;
 }
 .equivBody3{
   padding:16px;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
 }
+
 .equivPanel4{
   margin-top:15px;
   border: 1px solid #ade0e0;
