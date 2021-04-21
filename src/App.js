@@ -7,12 +7,15 @@ import pfp from './images/pfp.png';
 import PurpleCircle from './images/purpleCircle.png';
 import OrangeCircle from './images/orangeCircle.png';
 import Wsu from './images/WSU.png';
+import ReactToPrint from "react-to-print";
 import './App.css';
 
 class App extends Component {
   render(){
     const frontEndOptions = {
       chart: {
+        height:350,
+        width:350,
         type: 'pie'
       },
       credits:{
@@ -21,7 +24,7 @@ class App extends Component {
       legend:{
         align:'bottom',
         layout:'vertical',
-        x:100
+        x:85
       },
       title:{
         text: 'Front-End Tech'
@@ -40,7 +43,7 @@ class App extends Component {
         {
           name:'Technologies',
           data: [["HTML (2 Months)",2],["CSS (2 Months)",2],["JavaScript (4 Months)",4],["Bootstrap (2 Months)",2]],
-          size: '50%',
+          size: '45%',
           innerSize: '50%',
           showInLegend:true,
           dataLabels:{enabled:false}
@@ -49,6 +52,8 @@ class App extends Component {
     };
     const backEndOptions = {
       chart: {
+        height:350,
+        width:350,
         type: 'pie'
       },
       credits:{
@@ -57,7 +62,7 @@ class App extends Component {
       legend:{
         align:'bottom',
         layout:'vertical',
-        x:100
+        x:85
       },
       title:{
         text: 'Back-End Tech'
@@ -76,7 +81,7 @@ class App extends Component {
         {
           name:'Technologies',
           data: [["Java (4 Months)",4],["SpringBoot (3 Months)",3],["Python (12 Months)",12],["C++ (24 Months)",24]],
-          size: '50%',
+          size: '45%',
           innerSize: '50%',
           showInLegend:true,
           dataLabels:{enabled:false}
@@ -85,6 +90,8 @@ class App extends Component {
     };
     const devOpsOptions = {
       chart: {
+        height:350,
+        width:350,
         type: 'pie'
       },
       credits:{
@@ -93,7 +100,7 @@ class App extends Component {
       legend:{
         align:'bottom',
         layout:'vertical',
-        x:100
+        x:85
       },
       title:{
         text: 'DevOps'
@@ -112,7 +119,7 @@ class App extends Component {
         {
           name:'Technologies',
           data: [["GitKraken (4 Months)",4],["GitLab (2 Months)",2],["GitHub (20 Months)",20],["SVN (2 Months",2]],
-          size: '50%',
+          size: '45%',
           innerSize: '50%',
           showInLegend:true,
           dataLabels:{enabled:false}
@@ -121,6 +128,8 @@ class App extends Component {
     };
     const databaseLayerOptions = {
       chart: {
+        height:350,
+        width:350,
         type: 'pie'
       },
       credits:{
@@ -148,7 +157,7 @@ class App extends Component {
         {
           name:'Technologies',
           data: [["SQL (6 Months)",6],["MySQL (3 Months)",3],["Hibernate (3 Months)",3]],
-          size: '50%',
+          size: '45%',
           innerSize: '50%',
           showInLegend:true,
           dataLabels:{enabled:false}
@@ -157,6 +166,8 @@ class App extends Component {
     };
     const devToolsOptions = {
       chart: {
+        height:350,
+        width:350,
         type: 'pie'
       },
       credits:{
@@ -165,7 +176,7 @@ class App extends Component {
       legend:{
         align:'bottom',
         layout:'vertical',
-        x:100
+        x:85
       },
       title:{
         text: 'DevOps'
@@ -184,7 +195,7 @@ class App extends Component {
         {
           name:'Technologies',
           data: [["IntelliJ (4 Months)",4],["PyCharm (6 Months)",6],["Visual Studio Code (18 Months)",18],["Dev C++ (18 Months)",18]],
-          size: '50%',
+          size: '45%',
           innerSize: '50%',
           showInLegend:true,
           dataLabels:{enabled:false}
@@ -192,10 +203,13 @@ class App extends Component {
       ]
     };
   return (
-    <div className="App">
+    <div className="App" ref={(el) => (this.componentRef = el)}>
       <div className="container">
       <header className="App-header">
-        Print Export Word
+      <ReactToPrint
+          trigger={() => <button>Print this out!</button>}
+          content={() => this.componentRef}
+        />
       </header>
       <div className="topRow">
       <div className="imageContainer">
@@ -297,23 +311,23 @@ class App extends Component {
           Skill Matrix
       </div>
       <div className="equivBody3">
-        <div style={{width: 400, height: 400}}>
+        <div style={{width: 350, height: 350}}>
       <HighchartsReact highcharts={Highcharts} options={frontEndOptions}/>
       </div>
       
-      <div style={{width: 400, height: 400}}>
+      <div style={{width: 350, height: 350}}>
       <HighchartsReact highcharts={Highcharts} options={backEndOptions}/>
       </div>
 
-      <div style={{width: 400, height: 400}}>
+      <div style={{width: 350, height: 350}}>
       <HighchartsReact highcharts={Highcharts} options={devOpsOptions}/>
       </div>
 
-      <div style={{width: 400, height: 400}}>
+      <div style={{width: 350, height: 350}}>
       <HighchartsReact highcharts={Highcharts} options={databaseLayerOptions}/>
       </div>
 
-      <div style={{width: 400, height: 400}}>
+      <div style={{width: 350, height: 350}}>
       <HighchartsReact highcharts={Highcharts} options={devToolsOptions}/>
       </div>
       
@@ -325,7 +339,49 @@ class App extends Component {
           Projects
       </div>
       <div className="equivBody4">
-      
+        <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        Swim Glove Force Tracker Software Implementation
+        </h4>
+        <p>
+          Worked on a team for my Senior Design Project as the Software Lead to develop a swim glove that tracked
+           the force that was applied to it, and provided instant feedback as to whether or not the correct force was being applied.
+           After the swim session, the force was then displayed to the end-user on an interactive graph.
+
+        </p>
+        <h5 style={{marginBottom:10,fontSize:24,letterSpacing:1,fontWeight:400,marginTop:9}}>
+          Roles / Responsibilities
+        </h5>
+        <p>• Designed and implemented a program to track and store force applied to a swim glove that my team and I created. 
+
+<br/>• Led our software team, providing weekly goals, and allocating tasks to group members. 
+<br/>• Collaborated with our hardware team to properly implement software that met 
+requirements and worked with the developed hardware.</p>
+                <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+                    Environment / Technologies
+                </h4>
+                <p>
+          Arduino IDE with C based language, BlueTooth, Python, PyCharm, and SD cards.
+          </p>
+        <hr></hr>
+        <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        Stock Picking Software
+      </h4>
+      <p>Worked under Dr. Rajiv Bagai of Wichita State University to develop a program to pick out 
+        good long-term stocks to invest in based off of an algorithm that involves double sorting by common, 
+        researched finance metrics of the company.
+      </p>
+      <h5 style={{marginBottom:10,fontSize:24,letterSpacing:1,fontWeight:400,marginTop:9}}>
+        Roles / Responsibilities
+      </h5>
+      <p>• Researched finance surrounding stocks and learned formulas for necessary metrics and how to calculate them given the metrics avaliable from the Finnhub API.
+      <br/>  • Created a program to fetch, process, and store the latest stock data from Finnhub’s API. 
+<br/>• Processed the data and chose the best stocks based on the algorithms I researched and implemented.</p>
+            <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+            Environment / Technologies
+            </h4>
+<p>
+  Python, Finnhub's API, and PyCharm.
+</p>
     </div>
     </div>
     <div className="equivPanel5">
@@ -334,7 +390,16 @@ class App extends Component {
           Other Experiences
       </div>
       <div className="equivBody5">
-      
+      <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        Sam's Club
+      </h4>
+      <h5 style={{marginBottom:10,fontSize:20,color: '#fac252',fontWeight:400,marginTop:9}}>
+        Rotisserie Associate
+      </h5>
+      <h4 style={{marginBottom:10,fontSize:18,fontWeight:600,marginTop:9}}>
+        April 2017 - February 2021
+      </h4>
+      <hr style={{borderWidth:5,borderColor: '#fac252'}}></hr>
     </div>
     </div>
     </div>
