@@ -8,6 +8,9 @@ import PurpleCircle from './images/purpleCircle.png';
 import OrangeCircle from './images/orangeCircle.png';
 import Wsu from './images/WSU.png';
 import ReactToPrint from "react-to-print";
+import Printer from './images/printer.png';
+import Word from './images/word.png';
+import file from './images/profile.docx';
 import './App.css';
 
 class App extends Component {
@@ -205,13 +208,14 @@ class App extends Component {
   return (
     <div className="App" ref={(el) => (this.componentRef = el)}>
       <div className="container">
-      <header className="App-header">
-      <ReactToPrint
-          trigger={() => <button>Print this out!</button>}
-          content={() => this.componentRef}
-        />
-      </header>
-      <div className="topRow">
+        <header className="App-header">
+          <ReactToPrint
+              trigger={() => <button style={{backgroundColor:"transparent",borderColor:"transparent",cursor:"pointer",marginRight:45}}><img src={Printer} alt="alt" className="Printer"/><div style={{fontSize:16,color:"#1DBEFF"}}>Print</div></button>}
+              content={() => this.componentRef}
+            />
+            <a style={{textDecoration:"none"}} download='profile.docx' href={file}><img src={Word} alt="alt" className="Word"/><div style={{fontSize:16,color:"#1DBEFF",justifyContent:"end",alignSelf: "flex-end",width:70,height:"fit-content",marginLeft:90}}>Export Word</div></a>
+        </header>
+        <div className="topRow">
       <div className="imageContainer">
       <img src={pfp} alt="alt" className="profilepic"/>
       </div>
@@ -225,7 +229,7 @@ class App extends Component {
       </div>
       <img src={PyramidAcademy} alt="alt" className="pyramidPic"/>
       </div>
-      <div className="equivPanel">
+        <div className="equivPanel">
         <div className="equivHeader" >
           <img src={PyramidPic} alt="alt" className="keyboardPic"/>
           Industry Equivalency
@@ -234,42 +238,42 @@ class App extends Component {
           <div className="circleContainer">
             <div className="circle">
               <img src={PurpleCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">20</div>
+              <div className="numberEquiv">4</div>
             </div>
             <p className="typeOfEquiv">Java</p>
           </div>
           <div className="circleContainer">
             <div className="circle">
               <img src={OrangeCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">20</div>
+              <div className="numberEquiv">12</div>
             </div>
             <p className="typeOfEquiv">Python</p>
           </div>
           <div className="circleContainer">
             <div className="circle">
               <img src={PurpleCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">20</div>
+              <div className="numberEquiv">24</div>
             </div>
             <p className="typeOfEquiv">C++</p>
           </div>
           <div className="circleContainer">
             <div className="circle">
               <img src={OrangeCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">20</div>
+              <div className="numberEquiv">2</div>
             </div>
             <p className="typeOfEquiv">HTML</p>          
             </div>
           <div className="circleContainer">
             <div className="circle">
               <img src={PurpleCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">20</div>
+              <div className="numberEquiv">2</div>
             </div>
             <p className="typeOfEquiv">CSS</p>
           </div>
           <div className="circleContainer">
             <div className="circle">
               <img src={OrangeCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">20</div>
+              <div className="numberEquiv">4</div>
             </div>
             <p className="typeOfEquiv">JavaScript</p>          
             </div>
@@ -278,7 +282,7 @@ class App extends Component {
           </p>
         </div>
       </div>
-      <div className="aboutMe">
+        <div className="aboutMe">
         <h2>
           About Me
         </h2>
@@ -286,7 +290,7 @@ class App extends Component {
         I recently graduated from Wichita State University this past December with a bachelor in Computer Science and a minor in Math. After graduating, I joined in Pyramid Academy's training program to help prepare me for my career, and now I am looking for a company at which I can continue to learn and grow as a software engineer.<br/><br/>
         My three most important strengths are my drive to learn and grow, my work ethic, and my time management. These strengths help me to become a better developer, offer efficient work for my employer, and set accurate goals and stick to strict schedules that I can make for myself. These strengths allow me to adapt to and effectively use technologies to complete work on time for my employer. My aspirations for the future are to continue to learn and grow as a software engineer while effectively putting the skills I have developed to use in order to do good work for my employer. So far, with these strengths, I have completed a bachelor’s degree, and more recently did a training program with Pyramid Academy, where I learned multiple technologies and efficiently developed projects</p>
       </div>
-      <div className="equivPanel2">
+        <div className="equivPanel2">
         <div className="equivHeader2" >
         <img src={PyramidPic} alt="alt" className="keyboardPic"/>
           Education and Certification
@@ -305,7 +309,7 @@ class App extends Component {
       </div>
     </div>
     </div>
-      <div className="equivPanel3">
+        <div className="equivPanel3">
         <div className="equivHeader3" >
         <img src={PyramidPic} alt="alt" className="keyboardPic"/>
           Skill Matrix
@@ -333,7 +337,7 @@ class App extends Component {
       
     </div>
     </div>
-    <div className="equivPanel4">
+        <div className="equivPanel4">
         <div className="equivHeader4" >
         <img src={PyramidPic} alt="alt" className="keyboardPic"/>
           Projects
@@ -384,7 +388,7 @@ requirements and worked with the developed hardware.</p>
 </p>
     </div>
     </div>
-    <div className="equivPanel5">
+        <div className="equivPanel5">
         <div className="equivHeader5" >
         <img src={PyramidPic} alt="alt" className="keyboardPic"/>
           Other Experiences
@@ -402,7 +406,7 @@ requirements and worked with the developed hardware.</p>
       <hr style={{borderWidth:5,borderColor: '#fac252'}}></hr>
     </div>
     </div>
-    </div>
+      </div>
     </div>
   );
 }
