@@ -13,6 +13,17 @@
   margin-left: 80%;
   align-content:flex-start;
 }
+
+.Printer{
+  flex-shrink:0;
+  width:30px;
+  height:30px;
+}
+.Word{
+  flex-shrink:0;
+  width:30px;
+  height:40px;
+}
 .imageContainer{
   flex-shrink:0;
   align-content: flex-start;
