@@ -144,7 +144,7 @@ class App extends Component {
         x:100
       },
       title:{
-        text: 'DevOps'
+        text: 'Database'
       },
       plotOptions:{
         pie:{
@@ -182,7 +182,7 @@ class App extends Component {
         x:85
       },
       title:{
-        text: 'DevOps'
+        text: 'Developer Tools'
       },
       plotOptions:{
         pie:{
@@ -235,13 +235,17 @@ class App extends Component {
           Industry Equivalency
         </div>
         <div className="equivBody">
-          <div className="circleContainer">
+
+
+        <div className="circleContainer">
             <div className="circle">
               <img src={PurpleCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">4</div>
+              <div className="numberEquiv">24</div>
             </div>
-            <p className="typeOfEquiv">Java</p>
+            <p className="typeOfEquiv">C++</p>
           </div>
+
+
           <div className="circleContainer">
             <div className="circle">
               <img src={OrangeCircle} alt="alt" className="circleImage"/>
@@ -249,27 +253,17 @@ class App extends Component {
             </div>
             <p className="typeOfEquiv">Python</p>
           </div>
+
+
           <div className="circleContainer">
             <div className="circle">
               <img src={PurpleCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">24</div>
+              <div className="numberEquiv">4</div>
             </div>
-            <p className="typeOfEquiv">C++</p>
+            <p className="typeOfEquiv">Java</p>
           </div>
-          <div className="circleContainer">
-            <div className="circle">
-              <img src={OrangeCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">2</div>
-            </div>
-            <p className="typeOfEquiv">HTML</p>          
-            </div>
-          <div className="circleContainer">
-            <div className="circle">
-              <img src={PurpleCircle} alt="alt" className="circleImage"/>
-              <div className="numberEquiv">2</div>
-            </div>
-            <p className="typeOfEquiv">CSS</p>
-          </div>
+
+
           <div className="circleContainer">
             <div className="circle">
               <img src={OrangeCircle} alt="alt" className="circleImage"/>
@@ -277,6 +271,25 @@ class App extends Component {
             </div>
             <p className="typeOfEquiv">JavaScript</p>          
             </div>
+
+
+          <div className="circleContainer">
+            <div className="circle">
+              <img src={PurpleCircle} alt="alt" className="circleImage"/>
+              <div className="numberEquiv">2</div>
+            </div>
+            <p className="typeOfEquiv">HTML</p>          
+            </div>
+
+
+          <div className="circleContainer">
+            <div className="circle">
+              <img src={OrangeCircle} alt="alt" className="circleImage"/>
+              <div className="numberEquiv">2</div>
+            </div>
+            <p className="typeOfEquiv">CSS</p>
+          </div>
+          
           <p className="equivDescription">
             Equivalency in Months
           </p>
@@ -388,6 +401,84 @@ requirements and worked with the developed hardware.</p>
 </p>
     </div>
     </div>
+        
+    <div className="equivPanel6">
+        <div className="equivHeader6" >
+        <img src={PyramidPic} alt="alt" className="keyboardPic"/>
+          GitHub Projects
+      </div>
+      <div className="equivBody6">
+        <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        <a href="https://github.com/Tristen-Janzen/Flashcards">Flashcards</a>
+        </h4>
+        <p>
+        This is a fullstack flashcards application that uses Java, Springboot, Hibernate, MySQL, React, and the AntDesign React library. This app allows for users to create an account with a username and password, add study cards to their account, then study or manage said flashcards.
+
+        </p>
+                <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+                    Environment / Technologies
+                </h4>
+                <p>
+                Java, Springboot, Hibernate, MySQL, React, CSS, and the AntDesign React library.
+          </p>
+        <hr></hr>
+        <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        <a href="https://github.com/Tristen-Janzen/Retail">Retail</a>
+        </h4>
+        <p>
+        A full stack retail inventory app using Java, Spring Boot, Hibernate, with a React front-end.
+        </p>
+                <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+                    Environment / Technologies
+                </h4>
+                <p>
+                Java, Spring Boot, Hibernate, React, and CSS.
+          </p>
+        <hr></hr>
+        <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        <a href="https://github.com/Tristen-Janzen/profile">Profile</a>
+        </h4>
+        <p>
+        A simple profile page, built using React. This is what you are viewing!
+        </p>
+                <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+                    Environment / Technologies
+                </h4>
+                <p>
+                JavaScript, React, and CSS.
+          </p>
+        <hr></hr>
+        <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        <a href="https://github.com/Tristen-Janzen/Sandbox">Sandbox</a>
+        </h4>
+        <p>
+        This is a for fun React project that I use for testing things in React.
+        </p>
+                <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+                    Environment / Technologies
+                </h4>
+                <p>
+                React, JavaScript, and CSS.
+          </p>
+        <hr></hr>
+        <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+        <a href="https://github.com/Tristen-Janzen/Checkers">Checkers</a>
+        </h4>
+        <p>
+        This is a pure Java console app that is a 2 player game of checkers.
+        </p>
+                <h4 style={{fontSize: 24,fontWeight: 400,marginBottom: 5,marginTop:9}}>
+                    Environment / Technologies
+                </h4>
+                <p>
+                Java.
+          </p>
+          <h5 style={{marginBottom:10,fontSize:24,letterSpacing:1,fontWeight:400,marginTop:9}}>
+          
+        </h5>
+    </div>
+    </div>
+        
         <div className="equivPanel5">
         <div className="equivHeader5" >
         <img src={PyramidPic} alt="alt" className="keyboardPic"/>
