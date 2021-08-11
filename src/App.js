@@ -3,7 +3,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import PyramidAcademy from './images/pyramidAcademy.png';
 import PyramidPic from './images/pyramid.png';
-import pfp from './images/pfp.png';
+import pfp from './images/MyImage.jpg';
 import PurpleCircle from './images/purpleCircle.png';
 import OrangeCircle from './images/orangeCircle.png';
 import Wsu from './images/WSU.png';
@@ -45,7 +45,7 @@ class App extends Component {
       series: [
         {
           name:'Technologies',
-          data: [["HTML (2 Months)",2],["CSS (2 Months)",2],["JavaScript (4 Months)",4],["Bootstrap (2 Months)",2]],
+          data: [["HTML (12 Months)",12],["CSS (12 Months)",12],["JavaScript (4 Months)",4],["Bootstrap (2 Months)",2]],
           size: '45%',
           innerSize: '50%',
           showInLegend:true,
@@ -91,44 +91,44 @@ class App extends Component {
         }
       ]
     };
-    const devOpsOptions = {
-      chart: {
-        height:350,
-        width:350,
-        type: 'pie'
-      },
-      credits:{
-        enabled:false
-      },
-      legend:{
-        align:'bottom',
-        layout:'vertical',
-        x:85
-      },
-      title:{
-        text: 'DevOps'
-      },
-      plotOptions:{
-        pie:{
-          shadow: false
-        }
-      },
-      tooltip:{
-        formatter:function(){
-          return '<b>'+this.point.name +'</b>: '+ this.y;
-        }
-      },
-      series: [
-        {
-          name:'Technologies',
-          data: [["GitKraken (4 Months)",4],["GitLab (2 Months)",2],["GitHub (20 Months)",20],["SVN (2 Months",2]],
-          size: '45%',
-          innerSize: '50%',
-          showInLegend:true,
-          dataLabels:{enabled:false}
-        }
-      ]
-    };
+    // const devOpsOptions = {
+    //   chart: {
+    //     height:350,
+    //     width:350,
+    //     type: 'pie'
+    //   },
+    //   credits:{
+    //     enabled:false
+    //   },
+    //   legend:{
+    //     align:'bottom',
+    //     layout:'vertical',
+    //     x:85
+    //   },
+    //   title:{
+    //     text: 'DevOps'
+    //   },
+    //   plotOptions:{
+    //     pie:{
+    //       shadow: false
+    //     }
+    //   },
+    //   tooltip:{
+    //     formatter:function(){
+    //       return '<b>'+this.point.name +'</b>: '+ this.y;
+    //     }
+    //   },
+    //   series: [
+    //     {
+    //       name:'Technologies',
+    //       data: [["GitKraken (4 Months)",4],["GitLab (2 Months)",2],["GitHub (20 Months)",20],["SVN (2 Months",2]],
+    //       size: '45%',
+    //       innerSize: '50%',
+    //       showInLegend:true,
+    //       dataLabels:{enabled:false}
+    //     }
+    //   ]
+    // };
     const databaseLayerOptions = {
       chart: {
         height:350,
@@ -221,10 +221,10 @@ class App extends Component {
       </div>
       <div className="nameAndTitle">
       <div className="name">
-      Tristen Janzen
+      Yash Barot
       </div>
       <div className="jobTitle">
-      Fullstack Java Developer
+      Java, DevOps, Big-Data trainer
       </div>
       </div>
       <img src={PyramidAcademy} alt="alt" className="pyramidPic"/>
@@ -242,7 +242,7 @@ class App extends Component {
               <img src={PurpleCircle} alt="alt" className="circleImage"/>
               <div className="numberEquiv">24</div>
             </div>
-            <p className="typeOfEquiv">C++</p>
+            <p className="typeOfEquiv">DevOps</p>
           </div>
 
 
@@ -336,9 +336,9 @@ class App extends Component {
       <HighchartsReact highcharts={Highcharts} options={backEndOptions}/>
       </div>
 
-      <div style={{width: 350, height: 350}}>
-      <HighchartsReact highcharts={Highcharts} options={devOpsOptions}/>
-      </div>
+      {/*<div style={{width: 350, height: 350}}>*/}
+      {/*<HighchartsReact highcharts={Highcharts} options={devOpsOptions}/>*/}
+      {/*</div>*/}
 
       <div style={{width: 350, height: 350}}>
       <HighchartsReact highcharts={Highcharts} options={databaseLayerOptions}/>
